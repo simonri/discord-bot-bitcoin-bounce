@@ -10,7 +10,6 @@ bot.commands = new Collection();
 bot.aliases = new Collection();
 
 bot.categories = fs.readdirSync("./commands/");
-
 bot.prefix = "!";
 
 config({

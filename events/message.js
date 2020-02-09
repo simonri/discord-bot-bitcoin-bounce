@@ -1,8 +1,6 @@
 module.exports = async (bot, message) => {
 	if (message.author.bot) return;
-	if (!message.guild && message.attachments.array().length > 0) return analyzeImage(bot, message);
-
-	if (!message.content.startsWith(bot.prefix)) return bot.levels.newMSG(bot, message);
+	if (!message.content.startsWith(bot.prefix)) return;
 	if (!message.member && message.guild) message.member = await message.guild.fetchMember(message);
 
 	const args = message.content

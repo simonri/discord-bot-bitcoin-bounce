@@ -11,6 +11,7 @@
     "array-sort": "^1.0.0",
     "ascii-table": "0.0.9",
     "axios": "^0.19.2",
+    "bitcoin-lightning-nodejs": "^1.2.3",
     "common-tags": "^1.8.0",
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",

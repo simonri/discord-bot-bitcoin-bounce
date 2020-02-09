@@ -1,5 +1,5 @@
-const {RichEmbed} = require("discord.js");
-const {stripIndents} = require("common-tags");
+const { RichEmbed } = require("discord.js");
+const { stripIndents } = require("common-tags");
 
 module.exports = {
 	name: "help",
@@ -22,12 +22,13 @@ function getAll(bot, message) {
 
 	const commands = category => {
 		return bot.commands
-			.filter(cmd => cmd.category === category)
+			.filter(cmd => cmd.category === category && category != "crypto")
 			.map(cmd => `- ${cmd.name}`)
 			.join("\n");
 	};
 
 	const info = bot.categories
+		.filter(category => category != "crypto")
 		.map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n${commands(cat)}`)
 		.reduce((string, category) => string + "\n" + category);
 
