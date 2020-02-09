@@ -18,7 +18,7 @@ module.exports = {
 };
 
 function getAll(bot, message) {
-	const embed = new RichEmbed().setColor("RANDOM");
+	const embed = new RichEmbed().setColor("#F58716");
 
 	const commands = category => {
 		return bot.commands
